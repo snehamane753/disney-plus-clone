@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Disney+ Sign In</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    background-image:url("https://th.bing.com/th/id/R.fe3d0bab2c5caf6b57dda70762df25a2?rik=jaY4Bq9WjyRtNQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fFree-Desktop-Disney-HD-Wallpapers.jpg&ehk=rfMQJPtds3qrH21gSrQqRZXGjhjjUgJKQYfFsQPh4pc%3d&risl=&pid=ImgRaw&r=0");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.login-box{
+    width:380px;
+    padding:40px;
+    background:rgba(4, 4, 8, 0.45);
+    border-radius:12px;
+    text-align:center;
+    backdrop-filter:blur(0.8px);
+    
+}
+
+.logo{
+    color:white;
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:5px;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    background:#3f8aed;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+}
+
+button:hover{
+    background:#0052c7;
+}
+
+p{
+    color:rgb(242, 242, 242);
+    margin-top:20px;
+    font-size:14px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+
+    <h1 class="logo">Disney+</h1>
+
+    <input type="email" placeholder="Enter Email" required>
+
+    <input type="password" placeholder="Enter Password" required>
+
+    <button onclick="login()">Sign In</button>
+
+    <p>Welcome to Disney+</p>
+
+</div>
+
+<script>
+function login(){
+    window.location.href="home.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --bg-primary:#0b0f1a;
+    --bg-secondary:#131a28;
+    --card-bg:rgba(255,255,255,0.04);
+    --accent:#0063e5;
+    --text-primary:#ffffff;
+    --text-secondary:#b8bcc8;
+    --border:rgba(255,255,255,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg-primary);
+    color:var(--text-primary);
+    overflow-x:hidden;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 10%;
+    background:
+    linear-gradient(
+    rgba(11,15,26,.2),
+    rgba(11,15,26,.35)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600");
+    background-size:cover;
+    background-position:center;
+}
+
+.overlay{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4.5rem;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:var(--text-secondary);
+    font-size:1.15rem;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons button{
+    padding:14px 32px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.hero-buttons button:first-child{
+    background:var(--accent);
+    color:#fff;
+}
+
+.secondary{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.2) !important;
+    color:#fff;
+}
+
+.hero-buttons button:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= COMMON SECTION ================= */
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    text-align:center;
+    font-size:2.8rem;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.about p,
+.disneyland p,
+.cta p{
+    max-width:850px;
+    margin:auto;
+    color:var(--text-secondary);
+    line-height:1.9;
+    text-align:center;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:var(--bg-primary);
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    background:var(--bg-secondary);
+}
+
+.feature-container{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--card-bg);
+    backdrop-filter:blur(15px);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    transition:all .4s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background:rgba(0,99,229,.08);
+    transition:.5s;
+}
+
+.card:hover::before{
+    width:100%;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(0,99,229,.4);
+}
+
+.card i{
+    font-size:42px;
+    color:var(--accent);
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:12px;
+    font-size:1.2rem;
+}
+
+.card p{
+    color:var(--text-secondary);
+    line-height:1.7;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+    background:var(--bg-primary);
+}
+
+.stat-box{
+    text-align:center;
+    padding:40px 20px;
+    background:var(--card-bg);
+    border-radius:18px;
+    border:1px solid var(--border);
+}
+
+.stat-box h2{
+    color:#fff;
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:var(--text-secondary);
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    background:var(--bg-secondary);
+}
+
+.category-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.category-grid div{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:22px;
+    text-align:center;
+    font-weight:500;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.category-grid div:hover{
+    transform:translateY(-6px);
+    border-color:var(--accent);
+    color:var(--accent);
+}
+
+/* ================= DISNEYLAND ================= */
+
+.disneyland{
+    text-align:center;
+    background:
+    linear-gradient(
+    rgba(11,15,26,.5),
+    rgba(11,15,26,.4)),
+    url("https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=1600");
+    background-size:cover;
+    background-position:center;
+}
+
+.disneyland h2{
+    margin-bottom:20px;
+}
+
+.disneyland p{
+    color:white;
+}
+
+.disneyland button{
+    margin-top:35px;
+    padding:14px 35px;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.disneyland button:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+    background:var(--bg-primary);
+}
+
+.testimonial-container{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.review{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px;
+    transition:.3s ease;
+}
+
+.review:hover{
+    transform:translateY(-8px);
+}
+
+.review p{
+    color:var(--text-secondary);
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.review h4{
+    color:var(--accent);
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    text-align:center;
+    background:var(--bg-secondary);
+}
+
+.cta button{
+    margin-top:35px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    background:var(--accent);
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.cta button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 30px rgba(0,99,229,.25);
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0063e5;
+    border-radius:10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .hero h1{
+        font-size:3.2rem;
+    }
+
+    h2{
+        font-size:2.2rem;
+    }
+}
+
+@media(max-width:768px){
+
+    section{
+        padding:70px 6%;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-buttons button{
+        width:220px;
+    }
+}
